@@ -1,0 +1,16 @@
+This is my slackware customization.
+
+FILELIST
+========
+
+dot.xinitrc
+dot.bbkeysrc
+dot.blackboxrc
+dot.blackbox
+dot.blackbox/bgMenu
+dot.blackbox/menu
+dot.blackbox/styles
+dot.blackbox/styles/myGray
+dot.bbconf
+dot.bbconf/config
+
