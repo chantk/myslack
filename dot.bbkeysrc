@@ -79,4 +79,4 @@
     #[Execute]  (Mod4-E) {nautilus ~}
     #[Execute]  (F20) {nautilus ~}
   [end] (end keybindings)
-[end] (end bbkeys configuratn)
+[end] (end bbkeys configuration)

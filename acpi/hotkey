@@ -1,0 +1,47 @@
+#!/bin/sh
+# Default acpi script that takes an entry for all actions
+
+IFS=${IFS}/
+set $@
+
+case "$1" in
+  sony)
+    case "$5" in
+      00000010) echo dec_brightness
+        ;;
+      00000011) echo inc_brightness
+        ;;
+      00000012) logger "Switching between LCD/VGA output"
+        ;;
+      00000017) /usr/sbin/pm-suspend-hybrid
+        ;;
+      00000020) logger "ACPI sony hotkey S1"
+        ;;
+      00000021) logger "ACPI sony hotkey S2"
+        ;;
+      00000040) /usr/bin/eject
+        ;;
+      0000003b) logger "ACPI hotkey released"
+	;;
+      *) logger "ACPI $1 $2 $5 is not defined"
+        ;;
+    esac
+    ;;
+  ibm)
+    case "$5" in
+      00001002) logger "IBM acpi lcok"
+        ;;
+      00001003) logger "IBM acpi battery"
+        ;;
+      00001004) /usr/sbin/pm-suspend
+        ;;
+      0000100c) /usr/sbin/pm-hibernate
+        ;;
+      *) logger "ACPI $1 $2 $5 is not defined"
+        ;;
+    esac
+    ;;
+  *)
+    logger "ACPI hotkey $1 is not defined"
+    ;;
+esac

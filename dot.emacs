@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 (load-library "cl")
 (load-library "cl-loaddefs")
 
+=======
+>>>>>>> origin/master
 ;;; Line to top of window;
 ;;; replace three keystroke sequence  C-u 0 C-l
 (defun line-to-top-of-window ()
