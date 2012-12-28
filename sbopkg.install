@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# Download and install sbopkg from source
+#
+
+cd /tmp
+wget http://sbopkg.googlecode.com/files/sbopkg-0.36.0-noarch-1_cng.tgz
+
+installpkg /tmp/sbopkg-0.36.0-noarch-1_cng.tgz
