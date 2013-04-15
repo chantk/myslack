@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-#!/bin/csh
-
-alias la	ls -a
-alias ll	ls -l
-
-setenv PATH ${HOME}/bin:${PATH}
-
-=======
 # $FreeBSD: src/share/skel/dot.cshrc,v 1.13 2001/01/10 17:35:28 archie Exp $
 #
 # .cshrc - csh resource script, read at beginning of execution by each shell
@@ -16,12 +7,10 @@ setenv PATH ${HOME}/bin:${PATH}
 
 alias h		history 25
 alias j		jobs -l
-alias ls	ls -GF
+alias ls	ls -F --color
 alias la	ls -a
 alias lf	ls -FA
 alias ll	ls -lA
-alias aoeu	sw_kbdmap -q
-alias asdf	sw_kbdmap -d
 
 # A righteous umask
 umask 22
@@ -51,4 +40,3 @@ if ($?prompt) then
 		bindkey -k down history-search-forward
 	endif
 endif
->>>>>>> origin/master
