@@ -1,0 +1,49 @@
+#ControlMaster	auto
+#ControlPath	/home/chantk/.ssh/tmp/%h_%p_%r
+
+host github
+    user git
+    hostname github.nma.local
+    port 22
+    identityfile ~/.ssh/id_rsa_gitolite
+
+host github02
+    hostname github02.nma.local
+    port 22
+    identityfile ~/.ssh/id_rsa_gitolite
+    
+host chantk_github02
+    user chantk
+    hostname github02.nma.local
+    port 22
+    identityfile ~/.ssh/id_rsa
+    
+host ext_github02
+    user git
+    hostname 59.124.86.176
+    port 22
+    identityfile ~/.ssh/id_rsa_gitolite
+    
+host thds
+    user root
+    hostname thds.mooo.com
+    port 8022
+    ForwardAgent yes
+
+host gluon
+    user chantk
+    ProxyCommand ssh -q thds nc %h 22
+
+host muon
+    user chantk
+    ProxyCommand ssh -q thds nc %h 22
+
+host halley
+    user chantk
+    ProxyCommand ssh -q thds nc %h 22
+
+host threads
+    user root
+    hostname threads.mooo.com
+    port 8022
+

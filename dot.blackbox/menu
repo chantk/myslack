@@ -57,7 +57,7 @@
   [exec] (xterm)    {xterm -ls}
   [exec] (rxvt)     {rxvt}
 
-  [exec] (OpenOffice) {soffice}
+  [exec] (OpenOffice) {openoffice.org3}
   [exec] (Emacs)     {emacs}
   [exec] (Acroread)   {acroread}
   [exec] (Xpdf)       {xpdf}
@@ -70,6 +70,7 @@
 
   [submenu] (Internet)
     [exec] (Firefox)            {firefox}
+    [exec] (Google Chrome)      {google-chrome}
     [exec] (Thunderbird)        {thunderbird}
     [exec] (Mozilla Navigator)  {mozilla}
     [submenu] (More...)
@@ -108,8 +109,10 @@
   [reconfig] (Reconfigure)
   [restart] (Restart)
   [submenu] (Others)              {Other Window Managers}
-    [restart] (Start FVWM2)       {fvwm2}
     [restart] (Start WindowMaker) {wmaker}
+    [restart] (Start Xfce)        {startxfce4}
+    [restart] (Start KDE)         {startkde}
+    [restart] (Start FVWM2)       {fvwm2}
     [restart] (Start Fluxbox)     {fluxbox}
     [restart] (Start TWM)         {twm}
   [end]
